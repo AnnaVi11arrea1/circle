@@ -1,0 +1,133 @@
+body {
+    background-color: black;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    background-image: radial-gradient(white, gray, black);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: 30%;
+}
+
+.child1 {
+    width: 90%;
+    height: 90%;
+    background-image: radial-gradient(white, gray, black);
+    border-radius: 50%;
+    border: 5px solid black;
+    animation: rotate 10s infinite linear;
+    margin-left: 4%;
+    margin-top: 4%;
+ 
+    
+}
+
+#child2 {
+    margin-top: -3%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: orbit 10s infinite linear;
+}
+
+.wedgeArea {
+    top: 6%;
+    left: 2%;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-image: linear-gradient(white, gray, black);
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 5%;
+    box-shadow: 0 0 5px 7px rgba(75, 141, 255, 0.754);
+    
+}
+
+.wedgeArea::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: inset 0 0 5px 10px rgb(86, 230, 255);
+    background-image: radial-gradient(white, gray, black, blue);
+    top:25%;
+    left: 25%;
+    
+}
+
+.wedges { 
+    width: 55px;
+    height: 40px;
+    clip-path: polygon(0 0, 100% 16%, 100% 83%, 0 100%);
+    background-color: black;
+    transform-origin: 230% 50%;
+    position: absolute;
+    border: 10px solid transparent;
+    box-shadow: inset 0 0 5px 8px white;
+    transform: rotate(90deg);
+    margin-left: 8%;
+    margin-top: 43%;
+    
+}
+
+.wedges::after { 
+    content: '';
+    width: 90%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    background: var(--wedge-gradient);
+   
+    position: relative;
+    border: 8px solid blue;
+    display:block;
+    box-shadow: inset 0 0 2px 4px rgb(88, 0, 189);
+    border-image: linear-gradient(white, black) 30% round;
+    animation: orbit 5s linear infinite;
+}
+
+
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.arm1 {
+    width: 20%;
+    height: 200%;
+    border: 8px solid white;
+    background-image: radial-gradient(white, gray, black); 
+    border-image: radial-gradient(purple, magenta, blue, cyan, lime) 10% round;
+    animation: rotate 10s infinite linear;
+    margin-left: 8%;
+    margin-top: 43%;
+    position:absolute;
+    margin: 20%;
+    box-shadow: 0 0 10px 10px rgba(75, 255, 231, 0.754);
+}
+
+.arm2 {
+    width: 20%;
+    height: 200%;
+    background-image: radial-gradient(white, gray, black); 
+    border: 8px solid white;
+    border-image: radial-gradient(purple, magenta, blue, cyan, lime) 10% round;
+    animation: rotate 10s infinite linear;
+    left: 40%;
+    margin-top: 43%;
+    position:absolute;
+    margin: 20%;
+    box-shadow: 0 0 10px 10px rgba(75, 255, 231, 0.754);
+}
